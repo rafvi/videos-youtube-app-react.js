@@ -4,7 +4,7 @@ import axios from 'axios';
 import SearchBar from './SearchBar';
 import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
-import './App.css';
+import '../style/App.css';
 
 const KEY = 'AIzaSyAWLxf8PVHrXEV88PYOqpStJw2NVTCnqYo';
 
