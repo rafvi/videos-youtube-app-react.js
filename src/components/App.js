@@ -14,16 +14,23 @@ class App extends React.Component {
         selectedVideo: null
     }
 
+    componentDidMount() {
+        this.onSearchSubmit('news');
+    }
+
     onSearchSubmit = async (searchInput) => {
         const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
             params: {
                 part: 'snippet',
-                maxResults: 5,
+                maxResults: 10,
                 key: KEY,
                 q: searchInput
             }
         });
-        this.setState({ videos: response.data.items });
+        this.setState({ 
+            videos: response.data.items,
+            selectedVideo: response.data.items[0]
+        });
     };
 
     onVideoSelect = (video) => {
