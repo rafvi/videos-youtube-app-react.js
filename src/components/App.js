@@ -6,8 +6,8 @@ import VideoList from './VideoList';
 import VideoDetail from './VideoDetail';
 import '../style/App.css';
 
-const KEY = 'AIzaSyAWLxf8PVHrXEV88PYOqpStJw2NVTCnqYo';
-
+const KEY = process.env.REACT_APP_API_KEY;
+console.log(KEY)
 class App extends React.Component {
     state = {
         videos: [],
@@ -15,7 +15,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-        this.onSearchSubmit('news');
+        this.onSearchSubmit('info');
     }
 
     onSearchSubmit = async (searchInput) => {

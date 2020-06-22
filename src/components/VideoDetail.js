@@ -4,8 +4,8 @@ const VideoDetail = ({ video }) => {
     if (!video) {
         return (
 
-            <div class="ui active inline loader">
-                <div class="ui text loader">Loading...</div>
+            <div className="ui active inline loader">
+                <div className="ui text loader">Loading...</div>
             </div>
 
         )
